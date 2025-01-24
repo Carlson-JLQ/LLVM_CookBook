@@ -23,6 +23,7 @@ static int get_token(){
     // 检测LastChar是否为字母
     if (isalpha(LastChar)){
         Identifer_string = LastChar;
+        // 如果是数字和字母，就循环追加到Identifer_string
         while(isalnum((LastChar = fgetc(file)))){
             Identifer_string +=LastChar;
         }
